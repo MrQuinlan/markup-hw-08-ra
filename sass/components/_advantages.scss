@@ -1,0 +1,37 @@
+.advantages {
+    @extend .flex;
+
+    align-items: start;
+
+    &--item {
+        max-width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &--icon {
+        max-width: 270px;
+        margin-bottom: 30px;
+        padding: 25px 100px;
+
+        border-radius: 4px;
+        background: #f5f4fa;
+    }
+
+    &--title {
+        margin-bottom: 10px;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+    }
+
+    &--text {
+        color: $secondary-text-color;
+        line-height: 171.429%;
+        letter-spacing: 0.42px;
+    }
+}

@@ -1,0 +1,40 @@
+.social-list {
+    @extend .flex;
+
+    &--item {
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &--link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 50%;
+
+        transition: background-color $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+        }
+    }
+
+    &--icon {
+        fill: #afb1b8;
+
+        transition: fill $transition;
+    }
+
+    .social-list--link:hover &--icon,
+    .social-list--link:focus &--icon {
+        fill: #ffffff;
+    }
+}

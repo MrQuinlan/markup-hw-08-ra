@@ -1,0 +1,36 @@
+.contacts {
+    @extend .flex;
+
+    margin: 0;
+    padding: 0;
+    color: $secondary-text-color;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+
+    &--icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+
+    &--item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &--link {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        border-bottom: 3px solid transparent;
+
+        text-decoration: none;
+        color: inherit;
+
+        transition: color $transition;
+
+        .contacts--item &:hover,
+        .contacts--item &:focus {
+            color: $accent-color;
+        }
+    }
+}

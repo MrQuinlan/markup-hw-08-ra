@@ -1,0 +1,37 @@
+.nav {
+    margin-right: auto;
+
+    color: $main-text-color;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+.nav-list {
+    @extend .flex;
+    &--item {
+        position: relative;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
+
+    &--item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &--link {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        text-decoration: none;
+        color: $main-text-color;
+
+        transition: color $transition;
+
+        .nav-list--item &:hover,
+        .nav-list--item &:focus {
+            color: $accent-color;
+        }
+    }
+}

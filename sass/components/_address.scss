@@ -1,0 +1,25 @@
+.address {
+    &--link {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+        &:link,
+        &:visited {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 171.429%;
+            letter-spacing: 0.42px;
+
+            transition: color $transition;
+
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+}
