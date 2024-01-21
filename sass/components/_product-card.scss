@@ -1,69 +1,89 @@
 .product-card {
-    display: block;
+  display: block;
+  text-decoration: none;
+  color: $main-text-color;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &--img-wrapper {
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  &--img {
+    width: 100%;
+  }
+
+  &--overlay {
+    @extend .overlay;
+
+    top: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity $transition, transform $transition;
+
+    background: rgba(33, 150, 243, 0.9);
+
+    .product-card:hover &,
+    .product-card:focus & {
+      transform: translateY(-100%);
+
+      opacity: 1;
+    }
+
+    &-text {
+      color: #fff;
+
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.54px;
+    }
+  }
+
+  &--description {
+    max-width: 100%;
+    border: 1px solid #eeeeee;
+    border-top: none;
+    padding: 20px 24px;
+  }
+
+  &--title {
+    width: 100%;
     text-decoration: none;
-    color: $main-text-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 200%;
+    letter-spacing: 1.07px;
+  }
 
-    &:hover,
-    &:focus {
-        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
-            0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-    }
+  &--text {
+    color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 187.5%;
+    letter-spacing: 0.48px;
+  }
 
-    &--img-wrapper {
-        position: relative;
+  @media screen and (min-width: 768px) {
+    width: calc((768px - 60px) / 2);
 
-        overflow: hidden;
-    }
-
-    &--overlay {
-        @extend .overlay;
-
-        top: 100%;
-        height: 100%;
-        padding: 63px 24px;
-
-        pointer-events: none;
-
-        opacity: 0;
-
-        transition: opacity $transition, transform $transition;
-
-        background: rgba(33, 150, 243, 0.9);
-
-        .product-card:hover &,
-        .product-card:focus & {
-            transform: translateY(-100%);
-
-            opacity: 1;
-        }
-
-        &-text {
-            color: #fff;
-
-            font-size: 18px;
-            line-height: 28px;
-            letter-spacing: 0.54px;
-        }
+    &--img {
+      width: 100%;
     }
 
     &--description {
-        border: 1px solid #eeeeee;
-        border-top: none;
-        padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-
-    &--title {
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 200%;
-        letter-spacing: 1.08px;
-    }
-
-    &--text {
-        color: $secondary-text-color;
-        font-size: 16px;
-        line-height: 187.5%;
-        letter-spacing: 0.48px;
-    }
+  }
 }

@@ -1,28 +1,69 @@
 .team {
-    background-color: #f5f4fa;
+  background-color: #f5f4fa;
 
-    &--title {
-        margin-bottom: 50px;
-        text-align: center;
-        font-size: 36px;
-        font-weight: 700;
-        letter-spacing: 1.08px;
+  &--title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+  }
+
+  &--item {
+    max-width: 450px;
+    border-radius: 0px 0px 4px 4px;
+    background: #fff;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  @media screen and (max-width: 766px) {
+    &--item:not(:last-child) {
+      margin-bottom: 30px;
     }
+  }
 
+  @media screen and (min-width: 768px) {
     &--list {
-        display: flex;
-        justify-content: center;
-        text-align: center;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     &--item {
-        border-radius: 0px 0px 4px 4px;
-        background: #fff;
-        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-            0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      max-width: 354px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1198px) {
+    &--item {
+      &:not(:nth-last-child(2n-1)) {
+        margin-right: 30px;
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--item {
+      max-width: 354px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &--title {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: normal;
+      letter-spacing: 1.08px;
+    }
+
+    &--item {
+      max-width: 270px;
     }
 
     &--item:not(:last-child) {
-        margin-right: 30px;
+      margin-right: 30px;
     }
+  }
 }

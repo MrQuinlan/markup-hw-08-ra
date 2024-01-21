@@ -2,12 +2,16 @@
 @import './utils/visualy-hidden';
 
 @import './utils/common';
-@import './utils/active-page';
 @import './utils/overlay';
 
+@import './components/header';
 @import './components/logo';
+@import './components/mob-menu';
 @import './components/nav';
 @import './components/contacts';
+@import './components/mob-social';
+@import './components/menu';
+@import './utils/active-page';
 
 @import './components/hero';
 @import './components/btn';

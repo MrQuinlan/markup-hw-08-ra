@@ -1,13 +1,21 @@
 .join {
-    margin-right: 93px;
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .join--title {
-    margin-bottom: 20px;
-    padding-top: 11px;
+  margin-bottom: 20px;
+  padding-top: 11px;
 
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
 }

@@ -1,0 +1,31 @@
+.mob-menu {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-110%);
+    width: 100%;
+    padding: 48px 40px;
+    z-index: 1;
+    opacity: 0;
+
+    transition: transform $transition, opacity $transition;
+
+    background: #fff;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
+      0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+
+    &.is-open {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+}
